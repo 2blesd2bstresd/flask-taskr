@@ -90,5 +90,15 @@ def delete(task_id):
 	g.db.commit()
 	g.db.close()
 	flash ("Task Deleted.")
-	return redirect(url_for('taks'))
+	return redirect(url_for('tasks'))
+
+@app.route('/uncomplete/<int:task_id>') 
+@login_required
+def uncomplete(task_id):
+	g.db = connect_db()
+	g.db.execute('update tasks set status = 1 where task_id =' + str(task_id))
+	g.db.commit()
+	g.db.close()
+	flash('Task Completed.')
+	return redirect(url_for('tasks'))
 
