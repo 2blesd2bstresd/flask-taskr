@@ -1,7 +1,7 @@
 #views.py
 import datetime
 from flask import Flask, flash, redirect, render_template, request, \
-				  session, url_for, g
+				  session, url_for, g, Blueprint
 
 from functools import wraps
 from forms import AddTaskForm, RegisterForm, LoginForm
