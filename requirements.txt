@@ -1,4 +1,4 @@
-Flask
+Flask==0.10.1
 Flask-WTF==0.9.4
 gnureadline==6.3.3
 ipython==3.0.0
